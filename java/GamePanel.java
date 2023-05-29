@@ -33,11 +33,11 @@ public class GamePanel extends JPanel {
         g2d.clearRect(0, 0, getWidth(), getHeight());
 
         // Draw player image
-        BufferedImage playerImage = imageLoader.getImage("player.png");
+        BufferedImage playerImage = imageLoader.getPlayerImage("player.png");
         g2d.drawImage(playerImage, player.getX(), player.getY(), null);
 
         // Draw obstacle image
-        BufferedImage obstacleImage = imageLoader.getImage("obstacle.png");
+        BufferedImage obstacleImage = imageLoader.getObstacleImage("obstacle.png");
         g2d.drawImage(obstacleImage, obstacle.getX(), obstacle.getY(), null);
     }
 }
