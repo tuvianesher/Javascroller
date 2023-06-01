@@ -12,8 +12,8 @@ public class SideScrollerGame {
     private boolean running;
 
     public SideScrollerGame() {
-        this.gameWindow = new GameWindow(GamePanel.PANEL_WIDTH, GamePanel.PANEL_HEIGHT);
-        this.gamePanel = new GamePanel(GamePanel.PANEL_WIDTH, GamePanel.PANEL_HEIGHT);
+        this.gameWindow = new GameWindow(GamePanel.WIDTH, GamePanel.HEIGHT);
+        this.gamePanel = new GamePanel(GamePanel.WIDTH, GamePanel.HEIGHT);
         this.player = new Player();
         this.obstacle = new Obstacle();
         this.scoreboard = new Scoreboard();

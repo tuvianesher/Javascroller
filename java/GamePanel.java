@@ -6,12 +6,12 @@ import javax.swing.JPanel;
 import java.awt.Dimension;
 
 public class GamePanel extends JPanel {
-    private int width;
-    private int height;
+    public int width;
+    public int height;
     private Player player;
     private Obstacle obstacle;
     private ImageLoader imageLoader;
-    
+
     public GamePanel(int width, int height, Player player, Obstacle obstacle, ImageLoader imageLoader) {
         this.width = width;
         this.height = height;
@@ -33,11 +33,11 @@ public class GamePanel extends JPanel {
         g2d.clearRect(0, 0, getWidth(), getHeight());
 
         // Draw player image
-        BufferedImage playerImage = imageLoader.getPlayerImage("player.png");
+        BufferedImage playerImage = imageLoader.getImage("player.png");
         g2d.drawImage(playerImage, player.getX(), player.getY(), null);
 
         // Draw obstacle image
-        BufferedImage obstacleImage = imageLoader.getObstacleImage("obstacle.png");
+        BufferedImage obstacleImage = imageLoader.getImage("obstacle.png");
         g2d.drawImage(obstacleImage, obstacle.getX(), obstacle.getY(), null);
     }
 }
