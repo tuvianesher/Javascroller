@@ -1,8 +1,8 @@
 import javax.swing.JFrame;
 
 public class GameWindow extends JFrame {
-    private int width;
-    private int height;
+    public int width;
+    public int height;
 
     public GameWindow(int width, int height) {
         this.width = width;
