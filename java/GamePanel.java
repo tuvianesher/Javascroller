@@ -1,11 +1,13 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import java.awt.Dimension;
 
 public class GamePanel extends JPanel {
+    public static final long NANOSECONDS_PER_UPDATE = 1000000000 / 60; // 60 FPS
     public int width;
     public int height;
     private Player player;
@@ -39,5 +41,17 @@ public class GamePanel extends JPanel {
         // Draw obstacle image
         BufferedImage obstacleImage = imageLoader.getImage("obstacle.png");
         g2d.drawImage(obstacleImage, obstacle.getX(), obstacle.getY(), null);
+    }
+
+    public void clear() {
+        // Clear the panel if needed
+    }
+
+    public void drawImage(Image image, int x, int y) {
+        // Draw an image at the specified location if needed
+    }
+
+    public void drawText(String string, int x, int y) {
+        // Draw text at the specified location if needed
     }
 }
